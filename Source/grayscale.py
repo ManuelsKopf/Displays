@@ -29,5 +29,5 @@ for step in range(num_steps):
     plt.show()
 
     # Speichern des Bildes (optional)
-    cv2.imwrite(f'Generated Pictures\{step + 1}.jpg', increased_gray)
+    cv2.imwrite(f'Generated Pictures\Gray-Scale-{step + 1}.jpg', increased_gray)
 
