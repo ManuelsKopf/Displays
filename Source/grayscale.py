@@ -4,13 +4,15 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import os
 
-
+# müsste auch passen
 # Bildpfad
 image_path = "Base pictures\Image1.jpeg"
 
 # Bild laden und in Graustufen konvertieren
 img = cv2.imread(image_path)
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+plt.imshow(gray)
+plt.show()
 
 # Funktion zur Anpassung der Helligkeit
 def increase_brightness(image, value):
