@@ -1,3 +1,4 @@
+#nicht fertig
 import cv2
 from PIL import Image, ImageOps
 import numpy as np
