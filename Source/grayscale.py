@@ -1,6 +1,9 @@
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
+from PIL import Image
+import os
+
 
 # Bildpfad
 image_path = "Base pictures\Image1.jpeg"
