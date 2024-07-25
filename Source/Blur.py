@@ -1,6 +1,6 @@
 import cv2
 import matplotlib.pyplot as plt
-
+#passt
 # Bildpfad
 image_path_blur = "Base pictures\Image1.jpeg"
 
