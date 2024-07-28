@@ -1,16 +1,13 @@
-#nicht fertig
 import cv2
-from PIL import Image, ImageOps
-import numpy as np
-import matplotlib.pyplot as plt
+from PIL import Image
 import os
 
 
 input_folders = [1, 2, 4, 7, 11, 12, 13, 14, 15, 17, 18, 21, 22, 23, 26, 27, 32, 33, 35, 38]
 
-base_input_dir = 'Base pictures'
+base_input_dir = 'C:\\Users\\johan\\VSC-Projects\\Displays\\Reduzierte Bilder'
 
-base_output_dir = 'Generated Pictures'  
+base_output_dir = 'C:\\Users\\johan\\Documents\\GitHub\\Displays\\Generated Pictures\\Noise\\RGB'  
 
 
 def bearbeiten(input_image_path, output_image_path):
