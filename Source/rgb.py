@@ -5,9 +5,9 @@ import os
 
 input_folders = [1, 2, 4, 7, 11, 12, 13, 14, 15, 17, 18, 21, 22, 23, 26, 27, 32, 33, 35, 38]
 
-base_input_dir = 'C:\\Users\\johan\\VSC-Projects\\Displays\\Reduzierte Bilder'
+base_input_dir = 'Reduced pictures'
 
-base_output_dir = 'C:\\Users\\johan\\Documents\\GitHub\\Displays\\Generated Pictures\\Noise\\RGB'  
+base_output_dir = 'Generated Pictures/Noise/RGB'  
 
 
 def bearbeiten(input_image_path, output_image_path):
