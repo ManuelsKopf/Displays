@@ -4,19 +4,25 @@ import os
 
 input_folders = [1, 2, 4, 7, 11, 12, 13, 14, 15, 17, 18, 21, 22, 23, 26, 27, 32, 33, 35, 38]
 
-base_input_dir = 'C:\\Users\\johan\\Documents\\GitHub\\Displays\\Quadratisch Praktisch Guut'
+base_input_dir = 'Reduced pictures'
 
-base_output_dir = 'C:\\Users\\johan\\Documents\\GitHub\\Displays\\Generated Pictures\\Noise\\Contrast Ratio'
+base_output_dir = 'Generated Pictures\ContrastRatio'
 
 
-def bearbeiten2(input_image_path, output_image_path):
+def save_image_with_suffix(img, output_folder, base_filename, suffix):
+    output_image_path = os.path.join(output_folder, f"{base_filename}_{suffix}.png")
+    img.save(output_image_path)
+    print(f"Bild gespeichert: {output_image_path}")
+
+def bearbeiten2(input_image_path, output_image_path,base_filename):
     print(f"Bearbeite Bild: {input_image_path}")
     try:
         with Image.open(input_image_path) as img:
             image = img.convert('RGB')  # In RGB konvertieren
             enhancer = ImageEnhance.Contrast(image)
             image_enhanced = enhancer.enhance(0.8)
-            image_enhanced.save(output_image_path)
+            #image_enhanced.save(output_image_path)
+            save_image_with_suffix(image_enhanced, output_folder, base_filename, 'ContrastRatio')
             print("Penis")
             print(f"Bild gespeichert: {output_image_path}")
     except Exception as e:
@@ -35,8 +41,8 @@ for folder_number in input_folders:
     for filename in os.listdir(input_folder):
             input_image_path = os.path.join(input_folder, filename)
             output_image_path = os.path.join(output_folder, filename)
-        
-            bearbeiten2(input_image_path, output_image_path)
+            base_filename, ext = os.path.splitext(filename)
+            bearbeiten2(input_image_path, output_image_path,base_filename)
             print("Second step done")
 
 print('Alle Bilder wurden bearbeitet.')
