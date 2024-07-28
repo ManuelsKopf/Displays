@@ -7,7 +7,7 @@ input_folders = [1, 2, 4, 7, 11, 12, 13, 14, 15, 17, 18, 21, 22, 23, 26, 27, 32,
 
 base_input_dir = 'Reduced pictures'
 
-base_output_dir = 'Generated Pictures/Noise/RGB'  
+base_output_dir = 'Generated Pictures/RGB'  
 
 
 def bearbeiten(input_image_path, output_image_path):
