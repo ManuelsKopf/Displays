@@ -22,7 +22,7 @@ def bearbeiten4(input_image_path, output_folder, base_filename):
     try:
         with Image.open(input_image_path) as img:
             np_image = np.array(img)
-            img_rgb_blur = cv2.cvtColor(np_image, cv2.COLOR_BGR2RGB)
+            img_rgb_blur = cv2.cvtColor(np_image, cv2.COLOR_BGR2RGB) # Fehler
             img_rgb_blur_pil = Image.fromarray(img_rgb_blur)
             save_image_with_suffix(img_rgb_blur_pil, output_folder, base_filename, "edit1")
             print("Third Step Done")
