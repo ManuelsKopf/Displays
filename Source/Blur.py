@@ -17,14 +17,26 @@ def save_image_with_suffix(img, output_folder, base_filename, suffix):
     print(f"Bild gespeichert: {output_image_path}")
 
 
+# def bearbeiten4(input_image_path, output_folder, base_filename):
+#     print(f"Bearbeite Bild: {input_image_path}")
+#     try:
+#         with Image.open(input_image_path) as img:
+#             np_image = np.array(img)
+#             img_rgb_blur = cv2.cvtColor(np_image, cv2.COLOR_RGB2BGR) # Fehler
+#             img_rgb_blur_pil = Image.fromarray(img_rgb_blur)
+#             save_image_with_suffix(img_rgb_blur_pil, output_folder, base_filename, "edit1")
+#             print("Third Step Done")
+#     except Exception as e:
+#         print(f"Fehler beim Bearbeiten von {input_image_path}: {e}")
+
 def bearbeiten4(input_image_path, output_folder, base_filename):
     print(f"Bearbeite Bild: {input_image_path}")
     try:
         with Image.open(input_image_path) as img:
             np_image = np.array(img)
-            img_rgb_blur = cv2.cvtColor(np_image, cv2.COLOR_BGR2RGB) # Fehler
-            img_rgb_blur_pil = Image.fromarray(img_rgb_blur)
-            save_image_with_suffix(img_rgb_blur_pil, output_folder, base_filename, "edit1")
+            gaussian_blur = cv2.GaussianBlur(np_image, (15, 15), 0)
+            gaussian_blur_pil = Image.fromarray(gaussian_blur)
+            save_image_with_suffix(gaussian_blur_pil, output_folder, base_filename, "edit1")
             print("Third Step Done")
     except Exception as e:
         print(f"Fehler beim Bearbeiten von {input_image_path}: {e}")
