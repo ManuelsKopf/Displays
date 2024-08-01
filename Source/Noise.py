@@ -18,14 +18,12 @@ def generatePicture(input_image_path, output_image_path, base_filename):
     print(f"Bearbeite Bild: {input_image_path}")
     try:
         with Image.open(input_image_path) as img:
-            image = img.convert('RGB')  # In RGB konvertieren
+            image = img.convert('RGB')  
             np_image = np.array(image)
-            noise = np.random.normal(0, 25, np_image.shape)  # Rauschen hinzufügen
-            np_image_noisy = np_image + noise
-            np_image_noisy = np.clip(np_image_noisy, 0, 255).astype(np.uint8)  # Werte beschneiden und zu uint8 konvertieren
+            noise = np.random.normal(0, 25, np_image.shape) 
+            np_image_noisy = np.clip(np_image_noisy, 0, 255).astype(np.uint8) 
             image_noisy = Image.fromarray(np_image_noisy)
             save_image_with_suffix(image_noisy, output_folder, base_filename, 'Noise')
-            print("Penis")
             print(f"Bild gespeichert: {output_image_path}")
     except Exception as e:
         print(f"Fehler beim Bearbeiten von {input_image_path}: {e}")
@@ -45,4 +43,3 @@ for folder_number in input_folders:
                 generatePicture(input_image_path, output_image_path, base_filename)
                 print("Second step done")
 
-print('Alle Bilder wurden bearbeitet.')

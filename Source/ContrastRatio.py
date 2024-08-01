@@ -18,12 +18,10 @@ def bearbeiten2(input_image_path, output_image_path,base_filename):
     print(f"Bearbeite Bild: {input_image_path}")
     try:
         with Image.open(input_image_path) as img:
-            image = img.convert('RGB')  # In RGB konvertieren
+            image = img.convert('RGB') 
             enhancer = ImageEnhance.Contrast(image)
             image_enhanced = enhancer.enhance(0.8)
-            #image_enhanced.save(output_image_path)
             save_image_with_suffix(image_enhanced, output_folder, base_filename, 'ContrastRatio')
-            print("Penis")
             print(f"Bild gespeichert: {output_image_path}")
     except Exception as e:
         print(f"Fehler beim Bearbeiten von {input_image_path}: {e}")

@@ -38,9 +38,9 @@ def save_to_csv(image_info_list, output_csv_path):
 
 
 # Beispiel für die Verwendung
-base_input_dir = 'Generated Pictures\RGB'
+base_input_dir = 'Generated Pictures 2\Pixeldichte'
 input_folders = [1, 2, 4, 7, 11, 12, 13, 14, 15, 17, 18, 21, 22, 23, 26, 27, 32, 33, 35, 38]
-output_csv_path = 'CSV/RGB.csv'
+output_csv_path = 'CSV\Pixeldichte.csv'
 
 
 image_info_list = get_image_paths_and_folders(base_input_dir, input_folders)

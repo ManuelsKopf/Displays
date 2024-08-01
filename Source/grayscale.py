@@ -4,10 +4,6 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import os
 
-# müsste auch passen
-# Bildpfad
-
-
 input_folders = [1, 2, 4, 7, 11, 12, 13, 14, 15, 17, 18, 21, 22, 23, 26, 27, 32, 33, 35, 38]
 
 base_input_dir = 'Reduced pictures'
@@ -41,21 +37,6 @@ def generatePicture(input_image_path, output_folder, base_filename):
         except Exception as e:
             print(f"Fehler beim Bearbeiten von {input_image_path}: {e}")
 
-
-#image_path = "Base pictures\Image1.jpeg"
-
-# Bild laden und in Graustufen konvertieren
-#img = cv2.imread(image_path)
-#gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-#plt.imshow(gray)
-#plt.show()
-
-
-
-# Anzahl der Schritte und der Helligkeitswert pro Schritt
-#num_steps = 10
-#brightness_step = 20
-
 # Erhöhung der Graustufen in Schritten
 for folder_number in input_folders:
     input_folder = os.path.join(base_input_dir, str(folder_number))
@@ -72,4 +53,3 @@ for folder_number in input_folders:
 
 
 
-print('Alle Bilder wurden bearbeitet.')

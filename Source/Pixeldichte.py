@@ -5,9 +5,9 @@ import os
 
 input_folders = [1, 2, 4, 7, 11, 12, 13, 14, 15, 17, 18, 21, 22, 23, 26, 27, 32, 33, 35, 38]
 
-base_input_dir = 'C:\\Users\\johan\\Documents\\GitHub\\Displays\\Quadratisch Praktisch Guut'
+base_input_dir = 'Reduced pictures'
 
-base_output_dir = 'C:\\Users\\johan\\Documents\\GitHub\\Displays\\Generated Pictures\\Noise\\Pixeldichte'
+base_output_dir = 'Generated Pictures 2\Pixeldichte'
 
 def save_image_with_suffix(img, output_folder, base_filename, suffix):
     output_image_path = os.path.join(output_folder, f"{base_filename}_{suffix}.png")

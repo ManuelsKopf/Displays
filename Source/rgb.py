@@ -36,5 +36,3 @@ for folder_number in input_folders:
             # Bild bearbeiten und speichern
             bearbeiten(input_image_path, output_image_path)
 
-
-print('Alle Bilder wurden bearbeitet.')

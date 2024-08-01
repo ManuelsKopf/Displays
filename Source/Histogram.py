@@ -28,7 +28,6 @@ def bearbeiten3(input_image_path, output_folder, base_filename):
             new_img = cv2.normalize(np_image, None, alpha * 255, beta * 255, cv2.NORM_MINMAX)
             new_image = Image.fromarray(new_img)
             save_image_with_suffix(new_image, output_folder, base_filename, 'histogram_cut')
-            print("Penis")
             print(f"Bild gespeichert: {output_folder}")
     except Exception as e:
         print(f"Fehler beim Bearbeiten von {input_image_path}: {e}")
